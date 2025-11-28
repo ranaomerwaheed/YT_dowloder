@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پیشہ ورانہ یوٹیوب ڈاؤنلوڈر | YouTube Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>یُوٹیوب ویڈیوز ڈاؤنلوڈر 🚀</h1>
+            <p>اپنا یوٹیوب لنک یہاں پیسٹ کریں اور تمام کوالٹیز حاصل کریں۔</p>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="youtubeUrl" placeholder="یوٹیوب ویڈیو لنک یہاں پیسٹ کریں..." required>
+            <button onclick="getFormats()">کوالٹیز چیک کریں</button>
+        </div>
+
+        <div id="loading" class="hidden">
+            <div class="loader"></div>
+            <p>معلومات حاصل ہو رہی ہیں... براہ کرم انتظار کریں۔</p>
+        </div>
+
+        <div id="results" class="results-section hidden">
+            <div id="videoInfo"></div>
+            <div id="downloadOptions"></div>
+        </div>
+        
+        <div id="error-message" class="error-message hidden"></div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
