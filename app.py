@@ -160,6 +160,3 @@ def download_file():
             
         return jsonify({'error': f'ڈاؤن لوڈ ایرر: {str(e)}'}), 500
 
-if __name__ == '__main__':
-    # Local ٹیسٹنگ کے لیے
-    app.run(debug=True)
